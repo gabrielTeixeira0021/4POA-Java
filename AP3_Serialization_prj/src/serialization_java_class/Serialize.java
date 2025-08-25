@@ -1,0 +1,32 @@
+package serialization_java_class;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class Serialize {
+    
+	public static void serializeCarObj(Carro car, String filename) {
+		try(FileOutputStream fileOut = new FileOutputStream("carro.ser")){			
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+			out.writeObject(car);
+			out.close();
+			fileOut.close();
+			
+			System.out.println("Object Info Saved!");
+		}catch(IOException i) {
+			i.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		// inicializar uma instancia 
+		Carro car1 = new Carro("BYD", "Emo", "2024", "43123123");
+		
+		serializeCarObj(car1, "carro.ser");
+	}
+    
+}
+

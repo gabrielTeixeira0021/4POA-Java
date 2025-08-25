@@ -1,3 +1,4 @@
+package serialization_java_class;
 import java.io.Serializable;
 
 public class Carro implements Serializable{
