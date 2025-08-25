@@ -54,4 +54,4 @@ Este é um repositório de projeto acadêmico. Por favor, siga as diretrizes do 
 Este projeto é apenas para fins educacionais.
 
 ----------------------------------------------------------------
-#### Autores: Feito por @gabrielTeixeira001 e @Augusto_Mac
+#### Autores: @gabrielTeixeira001 e @Augusto_Mac
