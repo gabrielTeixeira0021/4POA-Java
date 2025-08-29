@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-public class PessoaEsqThread extends JLabel implements Runnable{
+public class PessoasEsquecidas extends JLabel implements Runnable{
 
     private Thread pessoaEsqThread = null;
     private int posX;
@@ -15,9 +15,9 @@ public class PessoaEsqThread extends JLabel implements Runnable{
     private String nome;
 
     // constructor
-    public PessoaEsqThread(){}
+    public PessoasEsquecidas(){}
 
-    public PessoaEsqThread(String nome, ImageIcon img, int posX, int posY){
+    public PessoasEsquecidas(String nome, ImageIcon img, int posX, int posY){
         super(img);
         this.img = img;
         this.posX = posX;
@@ -34,8 +34,8 @@ public class PessoaEsqThread extends JLabel implements Runnable{
         posX += new Random().nextInt(3) * 100;
         this.setLocation(posX, posY);
 
-        if(poX >= 800){
-            poss++;
+        if(posX >= 800){
+            pos++;
             JOptionPane.showMessageDialog(null, pos + ")" + nome);
             return;
         }

@@ -10,10 +10,20 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import control.CarroThread;
+import control.PessoasEsquecidas;
 
-    
+@SuppressWarnings("serial")
 public class Window extends JFrame implements ActionListener{
+
+    private JButton btnCorrida;
+    private JButton btnCancel;
+    private JLabel lblPista;
+    private JLabel lblVelocimetro;
+    private ImageIcon imgCorredor1;
+    private ImageIcon imgCorredor2;
+    private ImageIcon imgCorredor3;
+    private ImageIcon pista;
+    private ImageIcon velocimetro;
 
     // constructor
     public Window(){
@@ -45,9 +55,9 @@ public class Window extends JFrame implements ActionListener{
         this.btnCancel = new JButton("Cancelar");
 
         // Inserindo imagens dos corredores
-        imgCorredor1 = new ImageIcon(./src/images/pessoaEsquecida.png);
-        imgCorredor2 = new ImageIcon(./src/images/pessoaEsquecida.png);
-        imgCorredor3 = new ImageIcon(./src/images/pessoaEsquecida.png);
+        imgCorredor1 = new ImageIcon("../images/pessoaEsquecida.png");
+        imgCorredor2 = new ImageIcon("../images/pessoaEsquecida.png");
+        imgCorredor3 = new ImageIcon("../images/pessoaEsquecida.png");
 
         this.lblPista.add(btnCorrida);
         this.lblPista.add(btnCancel);
@@ -70,7 +80,7 @@ public class Window extends JFrame implements ActionListener{
     //Inserindo as labels do carro 
 
     public JLabel JLabelPessoaEsq(String nome, ImageIcon img, int posX, int posY) {
-        PessoaThreads pessoaEsq = new PessoaThreads(nome, img, posX, posY);
+        PessoasEsquecidas pessoaEsq = new PessoasEsquecidas(nome, img, posX, posY);
         pessoaEsq.setSize(256, 141);
         pessoaEsq.setVisible(true);
         this.add(pessoaEsq);
