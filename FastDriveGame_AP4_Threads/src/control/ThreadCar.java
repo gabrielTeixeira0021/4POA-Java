@@ -33,6 +33,7 @@ public class ThreadCar extends JLabel implements Runnable{
 		carThread.start();
 	}
 
+
 	
 	@Override
 	public void run() {
@@ -52,5 +53,5 @@ public class ThreadCar extends JLabel implements Runnable{
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-	}	
+	}
 }
